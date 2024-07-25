@@ -1,5 +1,5 @@
 # Use a lightweight OpenJDK image as the base
-FROM openjdk:11-slim-buster
+FROM openjdk:21-slim-buster as build
 
 # Set the working directory in the container
 WORKDIR /app
