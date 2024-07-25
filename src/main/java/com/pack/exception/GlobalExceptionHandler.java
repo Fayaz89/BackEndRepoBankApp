@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
-import com.pack.exception.UserIdAlreadyExistsException;
-import com.pack.exception.UserNotFoundException;
 import com.pack.response.ResponseHandler;
 
 @ControllerAdvice
@@ -32,6 +30,15 @@ public class GlobalExceptionHandler {
 		return ResponseHandler.generateResponse("User not found", HttpStatus.INTERNAL_SERVER_ERROR,
 				exception.getMessage());
 	}
+	
+	@ExceptionHandler(TransactionNotFoundException.class)
+	public ResponseEntity<Object> handleTransactionNotFoundException(TransactionNotFoundException exception) {
+
+		//logger.error("User not found");
+		return ResponseHandler.generateResponse("Transaction not found for this given transaction Id", HttpStatus.INTERNAL_SERVER_ERROR,
+				exception.getMessage());
+	}
+	
 	@ExceptionHandler(DataIntegrityViolationException.class)
 	public ResponseEntity<Object> duplicateEmailException(DataIntegrityViolationException e) {
 
