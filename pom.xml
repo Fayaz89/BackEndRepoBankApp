@@ -112,7 +112,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>UserMicroservice</finalName>
+		<finalName>BankService</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

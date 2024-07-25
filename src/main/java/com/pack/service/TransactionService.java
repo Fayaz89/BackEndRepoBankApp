@@ -25,7 +25,8 @@ public class TransactionService {
 	private UserRepository userRepository;
 
 	public Transaction createTransaction(Transaction transaction) {
-		// transaction.setTimestamp(LocalDateTime.now());
+		transaction.setCreatedtimestamp(LocalDateTime.now());
+		transaction.setUpdatedtimestamp(LocalDateTime.now());
 		return transactionRepository.save(transaction);
 	}
 

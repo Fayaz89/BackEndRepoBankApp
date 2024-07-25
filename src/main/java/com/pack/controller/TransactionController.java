@@ -23,6 +23,12 @@ public class TransactionController {
         Transaction createdTransaction = transactionService.createTransaction(transaction);
         return new ResponseEntity<>(createdTransaction, HttpStatus.CREATED);
     }
+    
+//    @PutMapping
+//    public ResponseEntity<Object> updateTransaction(@RequestBody Transaction transaction) {
+//        Transaction transaction = transactionService.getTransactionById(transaction.getTransactionId());
+//        return new ResponseEntity<>(createdTransaction, HttpStatus.CREATED);
+//    }
 
     @GetMapping
     public ResponseEntity<Object> getAllTransactions() {
