@@ -30,7 +30,7 @@ import com.pack.response.ResponseHandler;
 import com.pack.service.CardService;
 import com.pack.service.UserService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://34.71.248.96:3000")
 @RestController
 @RequestMapping("/users")
 public class UserController {
