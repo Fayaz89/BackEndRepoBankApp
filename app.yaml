@@ -1,0 +1,14 @@
+runtime: java17  # Java 11 or Java 17 depending on the compatibility
+
+
+handlers:
+  - url: /.*
+    script: this field is required, but ignored
+
+beta_settings:
+  cloud_sql_instances: "lloyds-hack-grp-46:us-central1:backend-db"    
+    
+# VPC access connector configuration
+# Replace 'connector-name' with your actual connector name
+#vpc_access_connector:
+# name: projects/lloyds-hack-grp-42/locations/us-central1/connectors/abc-bank
